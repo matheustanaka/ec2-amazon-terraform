@@ -19,6 +19,6 @@ variable "vpc_ec2" {
 }
 
 variable "ec2" {
-  type        = string
+  type        = list(string)
   description = "Assign EC2 instance"
 }
