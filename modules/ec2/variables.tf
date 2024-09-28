@@ -33,3 +33,8 @@ variable "subnet_ec2_public_az_b" {
   type        = string
   description = "assign subnet with load balancer in avaliability zone B"
 }
+
+variable "count_instance" {
+  type        = number
+  description = "Number of instances"
+}
