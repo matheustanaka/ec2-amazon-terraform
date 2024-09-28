@@ -3,7 +3,7 @@ resource "aws_vpc" "vpc_ec2" {
   instance_tenancy = "default"
 
   tags = {
-    Name        = "subnet-${terraform.workspace}"
+    Name        = "vpc-${terraform.workspace}"
     Environment = var.environment
   }
 }
