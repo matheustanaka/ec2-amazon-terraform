@@ -6,6 +6,7 @@ module "ec2" {
   tag_name                 = var.tag_name[terraform.workspace]
   subnet_ec2_public_az_a   = module.network.subnet_ec2_public_az_a
   subnet_ec2_public_az_b   = module.network.subnet_ec2_public_az_b
+  count_instance           = var.count_instance
 }
 
 module "network" {
