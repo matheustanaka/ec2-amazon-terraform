@@ -8,8 +8,8 @@ terraform {
 }
 
 provider "aws" {
-  profile = "matheus"
-  region  = "us-east-2"
+  profile = var.profile
+  region  = var.region
 }
 
 
