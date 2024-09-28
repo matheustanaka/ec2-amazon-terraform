@@ -1,3 +1,13 @@
+variable "profile" {
+  type        = string
+  description = "User profile"
+}
+
+variable "region" {
+  type        = string
+  description = "AWS Region"
+}
+
 variable "public_key" {
   type        = string
   description = "Path to the Public ssh key"
@@ -20,4 +30,9 @@ variable "tag_name" {
     "production"  = "production"
   }
 
+}
+
+variable "count_instance" {
+  type        = number
+  description = "Number of instances"
 }
