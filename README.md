@@ -1,18 +1,40 @@
-# Desafio terraform
+# Public EC2 with Load Balancer
 
-Comecei tomando pau em 2 coisas.
+Provisioning Amazon Ec2 with Load Balancer. This project deploy multiple EC2 instances with public subnet and Load balancer.
 
-Primeira, eu tava tentando pingar o ip público da máquina. Ai eu descobri que tinha que criar uma policy no security groups
-para liberar o acesso externo, o que não faz o menor sentido era que já existia um policy security com all traffic habilitado.
-Isso não fez o menor sentido, pedi pro chatgpt me ajudar e ele criou uma nova policy lá que na minha visão era a mesma que a default de quando
-você sobe o EC2.
+<img src="./assets/AWS - Diagram.jpeg" width="75">
 
-Segunda parte, tomei pau pra caralho pra fazer um ssh pra máquina. Tentei importar a minha chave pública com a tag de user_data e não funcionou.
-Tentei criar um script pra baixar o pacote de openssh e atualizar o service de ssh (quebrou a máquina).
-Eu tentei mais algumas coisas que não funcionaram. Por último eu descobri que precisava importar a chave através da tag key_name do terraform.
-Então eu criei um recurso chamado "aws_key_pair" e passei o conteúdo da minha chave pública.
+# Clone Project
 
-Algumas coisas que eu preciso aprender:
+```sh
+# Clone with ssh
+git clone git@github.com:matheustanaka/ec2-amazon-terraform.git
 
-- Como funciona uma conexão ssh
-- Entender redes de vez (ta foda, não to entendendo nada)
+cd ec2-amazon-terraform
+```
+
+# Running terraform
+
+```sh
+# Initialize modules
+terraform init
+
+# Planning changes
+terraform plan
+
+# Applying changes
+terraform apply
+```
+
+You can also create multiple evironments with terraform workspace. Ex:
+
+```sh
+# It creates a workspace for dev environment
+terraform workspace new dev
+```
+
+Then, you can run the commands to initialize modules, plan and apply again.
+
+# Support
+
+If you find any issue, please open a pull request or feel free to reach me out on [X](https://x.com/matheus__tanaka)
