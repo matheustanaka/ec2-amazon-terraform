@@ -2,7 +2,7 @@
 
 Provisioning Amazon Ec2 with Load Balancer. This project deploy multiple EC2 instances with public subnet and Load balancer.
 
-<img src="./assets/AWS - Diagram.jpeg" width="75">
+<img src="./assets/AWS - Diagram.jpeg">
 
 # Clone Project
 
